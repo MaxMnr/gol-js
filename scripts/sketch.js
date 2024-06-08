@@ -4,7 +4,7 @@ let jsons;
 let jsons_names = ["none", "glyder", "osc", "weekender", "glyder gun", "eater"];
 
 function preload() {
-  jsons = loadJSON("scripts/gol/masks.json");
+  jsons = loadJSON("scripts/masks.json");
 }
 
 function setup() {
