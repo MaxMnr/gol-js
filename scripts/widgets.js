@@ -1,6 +1,6 @@
 class Widgets {
   constructor() {
-    this.select = createSelect().parent("project-gol-widgets").addClass("");
+    this.select = createSelect().parent("project-gol-widgets").addClass("slider");
     for (let name of jsons_names) {
       this.select.option(name);
     }
