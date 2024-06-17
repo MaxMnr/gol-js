@@ -25,7 +25,7 @@ class Widgets {
     this.speed_slider = new Slider(10, 60, 10, 5, "Speed: ");
 
     this.save_button = createButton("save")
-      .mousePressed(() => save(gol.board.grid, "s.json"))
+      .mousePressed(() => save(gol.board.grid, "saved_mask.json"))
       .parent("animation-widgets")
       .addClass("button")
       .style("width: 10%; height: 70%");
