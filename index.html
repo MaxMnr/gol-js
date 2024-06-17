@@ -32,45 +32,43 @@
     </header>
     <script src="https://maximemunari.fr/scripts/navbar.js"></script>
 
-    <section class="project-description">
-      <hr width="100%" size="2px" color="white" />
-      <hr width="100%" size="1px" color="white" />
-      <h1 class="project-title">Conway's Game Of Life</h1>
-      <hr width="100%" size="1px" color="white" />
-      <hr width="100%" size="2px" color="white" />
-      </br></br></br></br>
+    <section class="project-section" id="project-description">
+      <hr class="hline-2" />
+      <hr class="hline-2" />
+      <h1>Conway Game Of Life</h1>
+      <hr class="hline-2" />
+      <hr class="hline-2" />
     </section>
 
-    <section class="project-animation">
-      <h1 class="project-subsection">Interactive Game</h1>
-      <h2 class="project-subsubsection">Play to Conway's Game Of Life.</h2>
-      <ul class="project-instructions">
-        <li>Click on a cell to switch its state.</li>
-        <li>Apply a mask to create a premade structure.</li>
-        <li>Get a random grid with 1:1 ratio.</li>
-        <li>Modify the size of the grid.</li>
-      </ul>
-
-      <div class="embedding-screen">
-        <div class="embedding-head">
-          <div id="embedding-close-buttons">
-            <button class="embedding-button" id="embedding-button-1"></button>
-            <button class="embedding-button" id="embedding-button-2"></button>
-            <button class="embedding-button" id="embedding-button-3"></button>
+    <section class="project-section" id="project-animation">
+      <div id="animation-description">
+        <ul class="instructions-list">
+          <li>Click on a cell to switch its state.</li>
+          <li>Apply a mask to create a premade structure.</li>
+          <li>Get a random grid with 1:1 ratio.</li>
+          <li>Modify the size of the grid.</li>
+        </ul>
+      </div>
+      <div id="animation-embedding">
+        <div id="animation-title">
+          <div id="animation-title-threebuttons">
+            <button class="button"></button><button class="button"></button><button class="button"></button>
           </div>
-          <h1 id="embedding-title">gol.js</h1>
+          <b id="animation-title-filename">vicsek.js</b>
         </div>
-        <hr id="embedding-hr" />
-        <div class="embedding-body">
-          <div class="project-widgets" id="project-gol-widgets"></div>
-          <hr id="embedding-hr" />
-          <div class="project-animation" id="project-gol-animation"></div>
+        <hr class="hline" />
+        <div id="animation-both">
+          <div id="animation-widgets"></div>
+          <hr class="hline" />
+          <div id="animation-canvas"></div>
+          <script src="scripts/gol.js"></script>
+          <script src="scripts/cell.js"></script>
+
+          <script src="scripts/grid.js"></script>
+          <script src="scripts/mask.js"></script>
+          <script src="scripts/widgets.js"></script>
+          <script src="scripts/sketch.js"></script>
         </div>
-        <script src="scripts/sketch.js"></script>
-        <script src="scripts/gol.js"></script>
-        <script src="scripts/grid.js"></script>
-        <script src="scripts/mask.js"></script>
-        <script src="scripts/widgets.js"></script>
       </div>
     </section>
 

@@ -4,15 +4,15 @@ let jsons;
 let jsons_names = ["none", "glyder", "osc", "weekender", "glyder gun", "eater"];
 
 function preload() {
-  jsons = loadJSON("scripts/masks.json");
+  jsons = loadJSON("masks.json");
 }
 
 function setup() {
-  let canvasDiv = document.getElementById("project-gol-animation");
+  let canvasDiv = document.getElementById("animation-both");
   let w = canvasDiv.offsetWidth;
   let h = canvasDiv.offsetHeight;
   let can = createCanvas(w, int(w / 2));
-  can.parent("project-gol-animation");
+  can.parent("animation-canvas");
   gol = new GameOfLife(25, 20);
   widgets = new Widgets();
 }
