@@ -1,6 +1,5 @@
 class Board {
   constructor(nrow, ncol) {
-    print(nrow, ncol);
     this.nrow = nrow;
     this.ncol = ncol;
     this.grid = this.makeGrid();
@@ -15,8 +14,8 @@ class Board {
 
   show() {
     push();
-    strokeWeight(1);
-    stroke("#444");
+    strokeWeight(map(this.nrow, 10, 200, 1, 0.1));
+    stroke(100);
     let w = width / this.ncol;
     let h = height / this.nrow;
     for (let row = 0; row < this.nrow; row++) {
@@ -27,7 +26,7 @@ class Board {
           rect(col * w, row * h, w, h);
         } else if (cellState === 1) {
           fill("#2cb67d");
-          rect(col * w, row * h, w, h, 5);
+          rect(col * w, row * h, w, h, 2);
         }
         if (this.mask.grid[row][col] == 1 && mouseOnScreen()) {
           fill("#7f5af0");

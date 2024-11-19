@@ -1,26 +1,25 @@
 let gol;
 let widgets;
 let jsons;
-let jsons_names = ["none", "glyder", "osc", "weekender", "glyder gun", "eater"];
+let jsons_names = ["Select A Mask", "glyder", "osc", "weekender", "glyder gun", "eater"];
 
 function preload() {
   jsons = loadJSON("masks.json");
 }
 
 function setup() {
-  let canvasDiv = document.getElementById("animation-both");
-  let w = canvasDiv.offsetWidth;
-  let h = canvasDiv.offsetHeight;
-  let can = createCanvas(w, int(w / 2));
+  let canvasDiv = document.getElementById("animation-div");
+  let w = canvasDiv.offsetWidth * 0.7;
+  let h = w * 0.5;
+  let can = createCanvas(w, h);
   can.parent("animation-canvas");
   gol = new GameOfLife(25, 20);
   widgets = new Widgets();
 }
 
 function draw() {
-  background("#16161a");
+  background(51);
   gol.show();
-
   if (mouseOnScreen()) {
     gol.update();
   }

@@ -10,6 +10,7 @@ class GameOfLife {
 
   update() {
     this.board.update();
+    
   }
 
   show() {

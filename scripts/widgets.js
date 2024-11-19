@@ -8,26 +8,26 @@ class Widgets {
     this.run_button = createButton("Run")
       .mousePressed(() => (gol.running = (gol.running + 1) % 2))
       .parent("animation-widgets")
-      .addClass("button")
+      .addClass("button-widgets")
       .style("width: 10%; height: 70%");
     this.random_button = createButton("Random")
       .mousePressed(() => (gol.board.grid = gol.board.makeRandomGrid()))
       .parent("animation-widgets")
-      .addClass("button")
+      .addClass("button-widgets")
       .style("width: 10%; height: 70%");
     this.reset_button = createButton("Reset")
       .mousePressed(() => gol.reset())
       .parent("animation-widgets")
-      .addClass("button")
+      .addClass("button-widgets")
       .style("width: 10%; height: 70%");
 
-    this.size_slider = new Slider(10, 200, 20, 5, "Size: ");
+    this.size_slider = new Slider(10, 100, 20, 5, "Size: ");
     this.speed_slider = new Slider(10, 60, 10, 5, "Speed: ");
 
     this.save_button = createButton("save")
       .mousePressed(() => save(gol.board.grid, "saved_mask.json"))
       .parent("animation-widgets")
-      .addClass("button")
+      .addClass("button-widgets")
       .style("width: 10%; height: 70%");
   }
 
